@@ -34,7 +34,7 @@ import org.apache.maven.project.MavenProjectHelper;
 /**
  * Goal to redistribute a pre-build jar file
  *
- * @author "Joerg Delker <jd@onix.de>"
+ * @version $Id: $Id
  */
 @Mojo(name = "jar",
         defaultPhase = LifecyclePhase.PACKAGE,
@@ -84,6 +84,8 @@ public class JarMojo
 
   /**
    * {@inheritDoc}
+   *
+   * @return a {@link java.lang.String} object.
    */
   protected String getClassifier() {
     return classifier;
@@ -91,6 +93,8 @@ public class JarMojo
 
   /**
    * {@inheritDoc}
+   *
+   * @return a {@link java.lang.String} object.
    */
   protected String getType() {
     return "jar";
@@ -98,12 +102,16 @@ public class JarMojo
 
   /**
    * {@inheritDoc}
+   *
+   * @return a {@link java.io.File} object.
    */
   protected File getJarFile() {
     return jarFile;
   }
 
   /**
+   * <p>Getter for the field <code>project</code>.</p>
+   *
    * @return the {@link #project}
    */
   protected final MavenProject getProject() {
@@ -112,9 +120,9 @@ public class JarMojo
 
   /**
    * Execute Plugin
-   * 
-   * @throws MojoExecutionException
-   * @throws MojoFailureException 
+   *
+   * @throws org.apache.maven.plugin.MojoExecutionException if any.
+   * @throws org.apache.maven.plugin.MojoFailureException if any.
    */
   public void execute() throws MojoExecutionException, MojoFailureException {
     File targetFile = provideArchive();
@@ -157,6 +165,12 @@ public class JarMojo
     return new File(basedir, fileName.toString());
   }
 
+  /**
+   * <p>provideArchive.</p>
+   *
+   * @return a {@link java.io.File} object.
+   * @throws org.apache.maven.plugin.MojoExecutionException if any.
+   */
   protected File provideArchive() throws MojoExecutionException {
     File targetFile = getTargetJarFile(outputDirectory, finalName, getClassifier());
     try {
@@ -181,6 +195,8 @@ public class JarMojo
   }
 
   /**
+   * <p>hasClassifier.</p>
+   *
    * @return true in case where the classifier is not {@code null} and contains
    * something else than white spaces.
    */
