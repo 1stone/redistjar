@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component-set>
+  <components>
+    <component> 
+      <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+      <role-hint>jar</role-hint>
+      <implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping</implementation>
+      <configuration>
+        <phases>
+          <package>
+            maven.plugin:redistjar-maven-plugin:jar
+          </package>
+          <install>
+            org.apache.maven.plugins:maven-install-plugin:install
+          </install>
+          <deploy>
+            org.apache.maven.plugins:maven-deploy-plugin:deploy
+          </deploy>
+        </phases>
+      </configuration>
+    </component>
+  </components>
+</component-set>
