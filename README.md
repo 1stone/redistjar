@@ -50,8 +50,8 @@ Make sure to specify the location of your jar file in the configuration.
     <build>
       <plugins>     
         <plugin>
-          <groupId>maven.plugin</groupId>
-          <artifactId>pseudojar-maven-plugin</artifactId>
+          <groupId>onestone.maven.plugin</groupId>
+          <artifactId>redistjar-maven-plugin</artifactId>
           <version>1.0-SNAPSHOT</version>
           <extensions>true</extensions>
           <configuration>
