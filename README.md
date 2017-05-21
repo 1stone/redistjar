@@ -1,0 +1,2 @@
+# redistjar
+RedistJar Maven Plugin
