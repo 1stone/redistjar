@@ -52,7 +52,7 @@ Make sure to specify the location of your jar file in the configuration.
         <plugin>
           <groupId>onestone.maven.plugin</groupId>
           <artifactId>redistjar-maven-plugin</artifactId>
-          <version>1.0-SNAPSHOT</version>
+          <version>1.0</version>
           <extensions>true</extensions>
           <configuration>
             <jarFile>${basedir}/src/main/lib/myCustom.jar</jarFile>
