@@ -50,7 +50,7 @@ Make sure to specify the location of your jar file in the configuration.
     <build>
       <plugins>     
         <plugin>
-          <groupId>onestone.maven.plugin</groupId>
+          <groupId>com.github.1stone</groupId>
           <artifactId>redistjar-maven-plugin</artifactId>
           <version>1.0</version>
           <extensions>true</extensions>

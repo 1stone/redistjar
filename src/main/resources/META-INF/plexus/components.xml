@@ -9,7 +9,7 @@
       <configuration>
         <phases>
           <package>
-            onestone.maven.plugin:redistjar-maven-plugin:jar
+            com.github.1stone:redistjar-maven-plugin:jar
           </package>
           <install>
             org.apache.maven.plugins:maven-install-plugin:install
