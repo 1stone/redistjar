@@ -26,6 +26,15 @@ Make sure to use the jar build lifecycle:
 
     <packaging>jar</packaging>
 
+Add this repository, to fetch the plugin:
+
+    <repositories>
+      <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+      </repository>
+    </repositories>
+
 Add any dependencies your JAR requires to run.
 In your example we require `commons-codec` and `commons-httpclient`. This will insure, that any project depending on your redistributed artifact is pulling the required libraries automatically.
 
