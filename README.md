@@ -9,11 +9,15 @@ It behaves pretty much like the well-known [Maven Jar Plugin](https://maven.apac
 
 ## Getting Started
 
-To use this plugin, just clone the repository and install the plugin bits with
+There is actually no need to compile this plugin on your own, because it is
+available as an maven artifact from the [jitpack repository](https://jitpack.io/#1stone/redistjar/).
+
+In case you want to compile this plugin on your own, simply invoke
 
     mvn install
 
 This should install you a copy of the plugin in your local maven repository.
+
 
 ## Create RedistJar Project
 
@@ -26,14 +30,14 @@ Make sure to use the jar build lifecycle:
 
     <packaging>jar</packaging>
 
-Add this repository, to fetch the plugin:
+If you want to fetch the plugin artifact from jitpack, add this plugin repository:
 
-    <repositories>
-      <repository>
+    <pluginRepositories>
+      <pluginRepository>
         <id>jitpack.io</id>
         <url>https://jitpack.io</url>
-      </repository>
-    </repositories>
+      </pluginRepository>
+    </pluginRepositories>
 
 Add any dependencies your JAR requires to run.
 In your example we require `commons-codec` and `commons-httpclient`. This will insure, that any project depending on your redistributed artifact is pulling the required libraries automatically.
